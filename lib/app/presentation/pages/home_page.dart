@@ -41,6 +41,32 @@ class HomePage extends GetResponsiveView {
                       ),
                     ],
                   ),
+                ),
+                Container(
+                  color: Colors.indigoAccent,
+                  height: 200,
+                  child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          color: Colors.amber,
+                          height: 100,
+                          width: 300,
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          height: 150,
+                          width: 150,
+                          color: Colors.pinkAccent,
+                          child: Text(
+                              'Stack gets the full height and width of it\'s parent and lays out children in LIFO manner. ie: the last child sits on top of other child'),
+                        ),
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
