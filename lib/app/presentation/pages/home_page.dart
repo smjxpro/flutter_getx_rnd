@@ -9,11 +9,40 @@ class HomePage extends GetResponsiveView {
       ),
       body: Container(
         child: Center(
-          child: Text(
-            'Lorem ipsum dolor sit amet...',
-            style: TextStyle(
-              fontSize:
-                  screen.responsiveValue(mobile: 20, tablet: 30, desktop: 50),
+          child: Container(
+            color: Colors.green,
+            child: Column(
+              children: [
+                Text(
+                  'A column takes the full height of the parent by default. This green portion is a column.',
+                  style: TextStyle(
+                    fontSize: screen.responsiveValue(
+                        mobile: 20, tablet: 30, desktop: 50),
+                  ),
+                ),
+                Container(
+                  color: Colors.red,
+                  child: Text(
+                    'A text widget only takes as much height and width as the content needs. This red portion is a text widget.',
+                  ),
+                ),
+                Container(
+                  color: Colors.yellow,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'A row takes the full width of the parent by default. This yellow portion is a row. This text widget has the possibility of being overflowed horizontally without the expanded widget.',
+                          style: TextStyle(
+                            fontSize: screen.responsiveValue(
+                                mobile: 20, tablet: 30, desktop: 50),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
             ),
           ),
         ),
